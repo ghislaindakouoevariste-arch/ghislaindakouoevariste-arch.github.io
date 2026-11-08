@@ -288,6 +288,15 @@ section{padding:96px 0;}
 .project h3{font-size:1.22rem; margin-bottom:10px;}
 .project p{color:var(--muted); font-size:.94rem; margin:0 0 18px; flex:1;}
 .stack{display:flex; flex-wrap:wrap; gap:7px;}
+.project-links{display:flex; flex-wrap:wrap; gap:9px; margin-bottom:14px;}
+.project-links a{
+  display:inline-flex; align-items:center; gap:7px;
+  font-size:.82rem; font-weight:700; padding:9px 15px; border-radius:999px;
+  border:1px solid var(--border); background:var(--surface-2); color:var(--text);
+  transition:border-color .2s, transform .2s;
+}
+.project-links a:hover{border-color:var(--gold); transform:translateY(-1px);}
+.project-links svg{width:14px; height:14px; stroke:var(--teal); fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round;}
 .stack span{
   font-size:.76rem; font-weight:600; padding:5px 11px; border-radius:8px;
   background:var(--surface-2); border:1px solid var(--border); color:var(--muted);
@@ -459,7 +468,7 @@ footer{border-top:1px solid var(--border); padding:38px 0; background:var(--bg-2
         <p data-i18n="about.p2">En parallèle de ma formation, je code. J'ai appris seul, en construisant — une plateforme de gestion scolaire, un assistant IA, des applications de collecte de données. C'est cette double compétence, statistique et technique, qui me semble décisive aujourd'hui en Afrique : savoir analyser les données, mais aussi savoir construire les outils qui les produisent.</p>
 
         <div class="facts">
-          <div class="fact"><b>ISSEA — AS1</b><span data-i18n="about.f1">Analyste Statisticien, 1ʳᵉ année</span></div>
+          <div class="fact"><b>ISSEA — AS2</b><span data-i18n="about.f1">Analyste Statisticien, 2ᵉ année</span></div>
           <div class="fact"><b data-i18n="about.f2b">Burkinabè</b><span data-i18n="about.f2">Basé à Yaoundé, Cameroun</span></div>
           <div class="fact"><b data-i18n="about.f3b">4 langues</b><span data-i18n="about.f3">Français, anglais, bwamu, dioula</span></div>
           <div class="fact"><b data-i18n="about.f4b">8 certifications</b><span data-i18n="about.f4">Cisco &amp; LinkedIn Learning</span></div>
@@ -502,6 +511,14 @@ footer{border-top:1px solid var(--border); padding:38px 0; background:var(--bg-2
         <div class="skill">
           <div class="skill-row"><b>R &amp; Power BI</b><span data-i18n="skills.lvl.learn">En cours d'apprentissage</span></div>
           <div class="bar"><i data-w="32"></i></div>
+        </div>
+        <div class="skill">
+          <div class="skill-row"><b>XLSTAT</b><span data-i18n="skills.lvl.adv">Avancé</span></div>
+          <div class="bar"><i data-w="80"></i></div>
+        </div>
+        <div class="skill">
+          <div class="skill-row"><b>SPSS</b><span data-i18n="skills.lvl.int">Intermédiaire</span></div>
+          <div class="bar"><i data-w="55"></i></div>
         </div>
       </div>
 
@@ -548,9 +565,9 @@ footer{border-top:1px solid var(--border); padding:38px 0; background:var(--bg-2
     </div>
 
     <div class="tools" style="margin-top:28px;">
-      <span>Python</span><span>SQL</span><span>R</span><span>Power BI</span><span>Excel / VBA</span>
+      <span>Python</span><span>SQL</span><span>R</span><span>Power BI</span><span>SPSS</span><span>XLSTAT</span><span>Excel / VBA</span>
       <span>Django</span><span>JavaScript</span><span>LaTeX</span><span>CSPro</span><span>ODK</span>
-      <span>Survey Solutions</span><span>Git</span><span>Canva</span><span>PowerPoint</span>
+      <span>Survey Solutions</span><span>Streamlit</span><span>Git</span><span>Canva</span><span>PowerPoint</span>
     </div>
   </div>
 </section>
@@ -563,6 +580,42 @@ footer{border-top:1px solid var(--border); padding:38px 0; background:var(--bg-2
     <p class="sec-sub" data-i18n="proj.sub">Des travaux académiques encadrés et des projets personnels menés pour apprendre en construisant.</p>
 
     <div class="projects">
+
+      <article class="card project reveal">
+        <div class="project-media"><img src="assets/bilan.jpg" alt="Bilan — tableau de bord de l'application de gestion de dépenses"></div>
+        <div class="project-body">
+          <span class="project-status live" data-i18n="proj.s5">Prêt à être déployé</span>
+          <h3 data-i18n="proj.t5">Bilan — application de gestion de dépenses</h3>
+          <p data-i18n="proj.p5">Un outil pour visualiser et suivre les dépenses, les revenus, les cotisations et les différents comptes : tableau de bord mensuel, budgets, crédits, objectifs, opérations récurrentes et répartition des dépenses par poste. Un assistant IA y est intégré : il répond aussi bien aux questions propres à la gestion de l'application qu'aux questions d'ordre général.</p>
+          <div class="stack"><span data-i18n="proj.k5a">Suivi budgétaire</span><span data-i18n="proj.k5b">Assistant IA intégré</span><span data-i18n="proj.k5c">Visualisation</span><span data-i18n="proj.k5d">Budgets &amp; objectifs</span></div>
+        </div>
+      </article>
+
+      <article class="card project reveal">
+        <div class="project-media placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="14" rx="2.5"/><path d="M9 21h6"/><path d="M12 18v3"/><rect x="5.6" y="11" width="2.6" height="4" rx=".8"/><rect x="10.7" y="7.6" width="2.6" height="7.4" rx=".8"/><rect x="15.8" y="9.6" width="2.6" height="5.4" rx=".8"/></svg>
+        </div>
+        <div class="project-body">
+          <span class="project-status" data-i18n="proj.s6">Projet de groupe — livré</span>
+          <h3 data-i18n="proj.t6">SIS-PC — suivi de la population carcérale du Cameroun</h3>
+          <p data-i18n="proj.p6">Conception d'un Système d'Information Statistique informatisé pour le suivi de la population carcérale : indicateurs du noyau, sources de données, circuit de l'information, architecture de la plateforme et processus de production. Le dispositif est accompagné d'un tableau de bord automatisé. Projet de fin de module mené en groupe à l'ISSEA.</p>
+          <div class="project-links">
+            <a href="https://dashbord-sispc-cameroun.streamlit.app/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9"/><path d="M19 14v4.5A2.5 2.5 0 0 1 16.5 21h-11A2.5 2.5 0 0 1 3 18.5v-11A2.5 2.5 0 0 1 5.5 5H10"/></svg>
+              <span data-i18n="proj.l6a">Ouvrir le tableau de bord</span>
+            </a>
+            <a href="projets/Rapport_SIS-PC_Cameroun.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>
+              <span data-i18n="proj.l6b">Lire le rapport</span>
+            </a>
+            <a href="projets/Rapport_SIS-PC_Cameroun.pdf" download="Rapport_SIS-PC_Cameroun.pdf">
+              <svg viewBox="0 0 24 24"><path d="M12 3v12M7.5 10.5L12 15l4.5-4.5"/><path d="M4 18.5V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-.5"/></svg>
+              <span data-i18n="proj.l6c">Télécharger le PDF</span>
+            </a>
+          </div>
+          <div class="stack"><span>Streamlit</span><span>Python</span><span data-i18n="proj.k6a">Système d'information statistique</span><span data-i18n="proj.k6b">Tableau de bord</span></div>
+        </div>
+      </article>
 
       <article class="card project reveal">
         <div class="project-media"><img src="assets/smartschool.jpg" alt="SmartSchoolAfrica"></div>
@@ -625,9 +678,9 @@ footer{border-top:1px solid var(--border); padding:38px 0; background:var(--bg-2
     <div class="timeline">
       <div class="tl-item reveal">
         <div class="tl-date" data-i18n="path.d1">2025 — en cours</div>
-        <h3 data-i18n="path.t1">Cycle Analyste Statisticien, 1ʳᵉ année (AS1)</h3>
+        <h3 data-i18n="path.t1">Cycle Analyste Statisticien — actuellement en 2ᵉ année (AS2)</h3>
         <div class="tl-org" data-i18n="path.o1">ISSEA — Institut Sous-régional de Statistique et d'Économie Appliquée, Yaoundé</div>
-        <p data-i18n="path.b1">Statistique, économétrie, comptabilité nationale, microéconomie, mathématiques et outils informatiques (LaTeX, Excel, programmation).</p>
+        <p data-i18n="path.b1">Statistique inférentielle (estimation et tests), analyse multidimensionnelle des données, théorie et pratique des enquêtes, statistiques sectorielles (prix, entreprise, travail, agriculture), démographie et sociologie, bases de données et systèmes d'information statistique, mathématiques (analyse et algèbre), anglais et techniques d'expression.</p>
       </div>
 
       <div class="tl-item reveal">
@@ -844,7 +897,7 @@ const I18N = {
     "about.cv":"View my CV",
     "about.p1":"After a science baccalaureate (série C) at Lycée Scientifique Régional de Dédougou, I joined ISSEA in Yaoundé to train as a statistical analyst. What draws me to this field is the moment a column of figures turns into an explanation: understanding why households in one region save differently, or checking whether an indicator really measures what it claims to.",
     "about.p2":"Alongside my studies, I code. I taught myself by building — a school management platform, an AI assistant, data collection applications. That combination of statistical and technical skill seems decisive in Africa today: knowing how to analyse data, but also how to build the tools that produce it.",
-    "about.f1":"Statistical Analyst, first year",
+    "about.f1":"Statistical Analyst, second year",
     "about.f2b":"Burkinabè", "about.f2":"Based in Yaoundé, Cameroon",
     "about.f3b":"4 languages", "about.f3":"French, English, Bwamu, Dioula",
     "about.f4b":"8 certifications", "about.f4":"Cisco & LinkedIn Learning",
@@ -871,12 +924,20 @@ const I18N = {
     "proj.t4":"Household savings — Lekié department",
     "proj.p4":"Statistical analysis of the determinants of household savings using FINFOLE 2023 survey data, carried out as part of my training at ISSEA.",
     "proj.k1":"Descriptive statistics",
+    "proj.s5":"Ready to deploy", "proj.t5":"Bilan — expense management application",
+    "proj.p5":"A tool to visualise and track expenses, income, contributions and the various accounts: monthly dashboard, budgets, credits, goals, recurring operations and a breakdown of spending by category. A built-in AI assistant answers both questions about running the application and general questions.",
+    "proj.k5a":"Budget tracking", "proj.k5b":"Built-in AI assistant", "proj.k5c":"Visualisation", "proj.k5d":"Budgets & goals",
+    "proj.s6":"Group project — delivered",
+    "proj.t6":"SIS-PC — monitoring Cameroon's prison population",
+    "proj.p6":"Design of a computerised Statistical Information System for monitoring the prison population: core indicators, data sources, information circuit, platform architecture and production process. The system comes with an automated dashboard. End-of-module group project at ISSEA.",
+    "proj.l6a":"Open the dashboard", "proj.l6b":"Read the report", "proj.l6c":"Download the PDF",
+    "proj.k6a":"Statistical information system", "proj.k6b":"Dashboard",
 
     "path.tag":"BACKGROUND", "path.title":"Education & experience",
     "path.sub":"The steps that brought me where I am today.",
-    "path.d1":"2025 — ongoing", "path.t1":"Statistical Analyst programme, first year",
+    "path.d1":"2025 — ongoing", "path.t1":"Statistical Analyst programme — currently in second year",
     "path.o1":"ISSEA — Sub-regional Institute of Statistics and Applied Economics, Yaoundé",
-    "path.b1":"Statistics, econometrics, national accounting, microeconomics, mathematics and computing tools (LaTeX, Excel, programming).",
+    "path.b1":"Inferential statistics (estimation and testing), multivariate data analysis, survey theory and practice, sector statistics (prices, business, labour, agriculture), demography and sociology, databases and statistical information systems, mathematics (analysis and algebra), English and communication skills.",
     "path.d2":"2026 — ongoing", "path.t2":"Self-directed data analysis training",
     "path.o2":"Personal programme",
     "path.b2":"An eight-week programme in SQL, Python, R and Power BI, backed by Cisco and LinkedIn Learning certifications.",
